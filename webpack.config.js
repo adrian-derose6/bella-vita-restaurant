@@ -13,5 +13,13 @@ module.exports = {
         contentBase: path.resolve(__dirname, "dist"),
         watchContentBase: true,
         compress: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(css)$/,
+                use: ['style-loader', 'css-loader'],  
+            }
+        ]
     }
 };

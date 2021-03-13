@@ -2,55 +2,15 @@ import loadHome from './home.js';
 import loadMenu from './menu.js';
 import loadContact from './contact.js';
 
-function createHeader() {
-    const header = document.createElement('header');
-    header.classList.add('header');
+function loadNav() {
+    const buttons = document.querySelectorAll('.button-nav');
 
-    const restaurantName = document.createElement('h1');
-    restaurantName.classList.add('restaurant-name');
-    restaurantName.textContent = "Bella Vita";
-
-    header.appendChild(restaurantName);
-    header.appendChild(createNav());
-
-    return header;
-}
-
-function createNav() {
-    const nav = document.createElement('nav');
-
-    const homeButton = document.createElement('button');
-    homeButton.classList.add('button-nav');
-    homeButton.textContent = "Home";
-    homeButton.addEventListener('click', (e) => {
-        if (e.target.classList.contains('active')) return;
-        setActiveButton(homeButton);
-        loadHome();
+    buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            if (e.target.classList.contains('active')) return;
+            setActiveButton(button);
+        });
     });
-
-    const menuButton = document.createElement('button');
-    menuButton.classList.add('button-nav');
-    menuButton.textContent = "Menu";
-    menuButton.addEventListener('click', (e) => {
-        if (e.target.classList.contains('active')) return;
-        setActiveButton(menuButton);
-        loadMenu();
-    });
-
-    const contactButton = document.createElement('button');
-    contactButton.classList.add('button-nav');
-    contactButton.textContent = "Contact";
-    contactButton.addEventListener('click', (e) => {
-        if (e.target.classList.contains('active')) return;
-        setActiveButton(contactButton);
-        loadContact();
-    })
-
-    nav.appendChild(homeButton);
-    nav.appendChild(menuButton);
-    nav.appendChild(contactButton);
-
-    return nav;
 }
 
 function setActiveButton(button) {
@@ -58,11 +18,12 @@ function setActiveButton(button) {
 
     buttons.forEach((button) => {
         if (button !== this) {
-            button.classList.remove('active');
+            button.classList.remove('active-button');
         }
     });
 
-    button.classList.add('active');
+    button.classList.add('active-button');
+    console.log('Set Active')
 }
 
 function createMain() {
@@ -94,11 +55,12 @@ function createFooter() {
 }
 
 function initializeWebsite() {
-    const content = document.getElementsById('content');
+    const content = document.getElementById('content');
 
-    content.appendChild(createHeader());
+    loadNav();
     content.appendChild(createMain());
     content.appendChild(createFooter());
+    loadHome();
 }
 
 export default initializeWebsite;
