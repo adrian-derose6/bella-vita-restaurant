@@ -52,6 +52,7 @@ header.active {
 #name-container h5 {
     letter-spacing: 5px;
     margin: 0px;
+    margin-bottom: 10px;
 }
 
 #restaurant-name {
@@ -93,16 +94,16 @@ button {
 }
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 3; 
+    top: 0; 
     left: 0;
-    background-color: #343434;/* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #343434;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.4s; 
 }
 
 .sidenav a {
@@ -212,11 +213,11 @@ main {
 }
 
 .landing-content {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #landing-main-text {
@@ -224,16 +225,76 @@ main {
     font-family: 'Tangerine', cursive;
     color: white;
     margin: 10px;
+    white-space: nowrap;
+
+    -webkit-animation: fadeInSlideDown 1s; 
+    -moz-animation: fadeInSlideDown 1s; 
+     -ms-animation: fadeInSlideDown 1s; 
+      -o-animation: fadeInSlideDown 1s; 
+         animation: fadeInSlideDown 1s;
+
 }
+
+@keyframes fadeInSlideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeInSlideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeInSlideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeInSlideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
 
 #landing-sub-text {
     font-size: 20px;
     font-weight: 400;
+    opacity: 0;
     margin: 20px;
     letter-spacing: 4px;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    transform-origin: 50% 50% 0px;
     color: white;
+    -webkit-animation: fadeInSlideDown 1s 1s forwards; 
+    -moz-animation: fadeInSlideDown 1s 1s forwards; 
+     -ms-animation: fadeInSlideDown 1s 1s forwards; 
+      -o-animation: fadeInSlideDown 1s 1s forwards; 
+         animation: fadeInSlideDown 1s 1s forwards;
 }
 
 #landing-button {
@@ -263,18 +324,144 @@ main {
     min-width: 0px;
     max-height: none;
     max-width: none;
-    opacity: 1;
+    opacity: 0;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-origin: 50% 50% 0px;
     transition: background-color .2s, border-color .2s;
     -webkit-transition: background-color .2s, border-color .2s;
     -moz-transition: background-color .2s, border-color .2s;
     -o-transition: background-color .2s, border-color .2s;
+    -webkit-animation: fadeInSlideUp 1s 2s forwards; 
+    -moz-animation: fadeInSlideUp 1s 2s forwards; 
+     -ms-animation: fadeInSlideUp 1s 2s forwards; 
+      -o-animation: fadeInSlideUp 1s 2s forwards; 
+         animation: fadeInSlideUp 1s 2s forwards;
+}
+
+@keyframes fadeInSlideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeInSlideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeInSlideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeInSlideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0%);
+    }
 }
 
 #landing-button:hover {
     background-color: rgb(218, 188, 149);
     border-color: rgb(218, 188, 149);
+}
+
+#landing-pointer {
+    max-width: 30px;
+    min-width: 30px;
+    height: 55px;
+    opacity: 0;
+    border: 2px solid white;
+    border-radius: 23px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    -webkit-animation: fadeInSlideUp 1s forwards; 
+    -moz-animation: fadeInSlideUp 1s forwards; 
+     -ms-animation: fadeInSlideUp 1s forwards; 
+      -o-animation: fadeInSlideUp 1s forwards; 
+         animation: fadeInSlideUp 1s forwards;
+}
+
+#landing-pointer span {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: slideDownFadeOut 2.5s linear infinite;
+    -webkit-animation: slideDownFadeOut 2.5s linear infinite; 
+    -moz-animation: slideDownFadeOut 2.5s linear infinite;
+     -ms-animation: slideDownFadeOut 2.5s linear infinite;
+      -o-animation: slideDownFadeOut 2.5s linear infinite; 
+}
+
+@keyframes slideDownFadeOut {
+    from { 
+        transform: translateY(0%); 
+    }
+    to {  
+        transform: translateY(300%);
+        opacity: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slideDownFadeOut {
+    from { 
+        transform: translateY(0%); 
+    }
+    to { 
+        transform: translateY(300%);
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slideDownFadeOut {
+    from { 
+        transform: translateY(0%); 
+    }
+    to { 
+        transform: translateY(300%);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slideDownFadeOut {
+    from { 
+        transform: translateY(0%); 
+    }
+    to { 
+        transform: translateY(300%);
+    }
 }
 
 @media (max-width: 600px) {
