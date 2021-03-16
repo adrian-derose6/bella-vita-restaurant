@@ -4,6 +4,8 @@ import loadContact from './contact.js';
 
 function loadNav() {
     const buttons = document.querySelectorAll('.button-nav');
+    const navMenuIcon = document.getElementById('nav-menu-icon');
+    const navCloseButton = document.getElementById('nav-closebtn');
 
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
@@ -11,6 +13,11 @@ function loadNav() {
             setActiveButton(button);
         });
     });
+
+    
+    navMenuIcon.addEventListener('click', openNav);
+    navCloseButton.addEventListener('click', closeNav);
+
 }
 
 function runOnScroll() {
@@ -51,6 +58,17 @@ function setActiveButton(button) {
     console.log('Set Active')
 }
 
+function openNav() {
+    document.getElementById("sidenav").style.width = "250px";
+    document.getElementById("nav-open-canvas").style.width = "100vw";
+    document.getElementById("nav-open-canvas").addEventListener("click", closeNav);
+}
+
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("nav-open-canvas").style.width = "0";
+}
+
 function createFooter() {
     const footer = document.createElement("footer");
     footer.classList.add("footer");
@@ -80,6 +98,10 @@ function initializeWebsite() {
 
     window.addEventListener("scroll", runOnScroll);
     window.addEventListener("resize", runOnResize);
+}
+
+window.onload = function() {
+
 }
 
 export default initializeWebsite;
