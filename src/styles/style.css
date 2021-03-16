@@ -11,8 +11,9 @@ body {
 #content {
     min-height: 100%;
     border: 1px solid green;
-    height: 100vh;
 }
+
+/* Header Styles */
 
 header {
     background: transparent;
@@ -20,7 +21,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110px;
+    height: 130px;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -33,14 +34,18 @@ header.active {
     opacity: 1;
     height: 90px;
     transition: all 0.5s;
-    -webkit-box-shadow: 0px 1px 4px 0px #000000; 
-    box-shadow: 0px 1px 4px 0px #000000;    
+    -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
+    box-shadow: 0px 1px 6px 0px #c5c5c5;
+    padding: none; 
 }
 
 #name-container {
     padding-top: 5px;
     color: white;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
@@ -48,10 +53,11 @@ header.active {
     letter-spacing: 5px;
     margin: 0px;
 }
+
 #restaurant-name {
     font-size: 60px;
     font-family: 'Tangerine', cursive;
-    margin: 0;
+    margin: 0px;
     color: white;
     padding: none;
 }
@@ -82,7 +88,151 @@ button {
     border-bottom: 1px solid white;
 }
 
+#nav-menu-icon {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    header { 
+        width: 100%;
+        justify-content: space-between;
+        background-color: white;
+        height: 80px;
+        -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
+        box-shadow: 0px 1px 6px 0px #c5c5c5
+    }
+
+    nav {
+        display: none;
+    }
+
+    #name-container {
+        margin-left: 20px;
+    }
+
+    #restaurant-name {
+        font-size: 50px;
+    }
+
+    #restaurant-name, #name-container h5 {
+        color: #333;
+    }
+
+    #nav-menu-icon {
+        display: inline;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 75px;
+    }
+
+    #restaurant-name {
+        font-size: 30px;
+    }
+
+    #name-container h5 {
+        font-size: 10px;
+    }
+}
+
+
+/* Main section styles */
+
+
 main {
     height: 200vh;
     width: 100%;
+}
+
+/* Landing section styles */
+
+.landing-section {
+    border: 1px solid orange;
+    background-repeat: no-repeat;
+    background-image: url("http://demo.ovathemes.com/reon/wp-content/uploads/2018/12/slideshow_1.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-main-text {
+    font-size: 100px;
+    font-family: 'Tangerine', cursive;
+    color: white;
+    margin: 10px;
+}
+
+#landing-sub-text {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px;
+    letter-spacing: 4px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+    color: white;
+}
+
+#landing-button {
+    z-index: 7;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans";
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 2px;
+    outline: none;
+    box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    visibility: inherit;
+    transition: none 0s ease 0s;
+    text-align: inherit;
+    margin: 30px;
+    padding: 21px 44px;
+    letter-spacing: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+    transition: background-color .2s, border-color .2s;
+    -webkit-transition: background-color .2s, border-color .2s;
+    -moz-transition: background-color .2s, border-color .2s;
+    -o-transition: background-color .2s, border-color .2s;
+}
+
+#landing-button:hover {
+    background-color: rgb(218, 188, 149);
+    border-color: rgb(218, 188, 149);
+}
+
+@media (max-width: 600px) {
+
 }

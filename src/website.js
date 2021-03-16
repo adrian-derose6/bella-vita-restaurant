@@ -15,15 +15,28 @@ function loadNav() {
 
 function runOnScroll() {
     const header = document.getElementById('header');
-    let top = window.scrollY;
-    console.log(top);
-    if (top >= 100) {
+    const top = window.scrollY;
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
+    if (top >= 100 && vw >= 1199) {
         header.classList.add('active');
-    } else {
+    }
+    else {
         header.classList.remove('active');
     }
     console.log('scrolling')
- }; 
+ };
+
+function runOnResize() {
+    const header = document.getElementById('header');
+
+    if (window.innerWidth <= 1199) {
+        header.classList.remove('active');
+    }
+    else if (window.innerWidth > 1199) {
+        header.classList.add('active');
+    }
+}
 
 function setActiveButton(button) {
     const buttons = document.querySelectorAll('.button-nav');
@@ -64,9 +77,9 @@ function initializeWebsite() {
 
     loadNav();
     content.appendChild(createFooter());
-    loadHome();
 
     window.addEventListener("scroll", runOnScroll);
+    window.addEventListener("resize", runOnResize);
 }
 
 export default initializeWebsite;
