@@ -1,15 +1,20 @@
 html {
     font-size: 62.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     font-size: 1.6rem;
     font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    height: 100%
 }
 
 #content {
-    min-height: 100%;
+    height: 100%;
     border: 1px solid green;
 }
 
@@ -196,7 +201,6 @@ main {
 /* Landing section styles */
 
 .landing-section {
-    border: 1px solid orange;
     background-repeat: no-repeat;
     background-image: url("http://demo.ovathemes.com/reon/wp-content/uploads/2018/12/slideshow_1.jpg");
     background-size: cover;
@@ -465,5 +469,150 @@ main {
 }
 
 @media (max-width: 600px) {
+    #landing-main-text {
+        font-size: 60px;
+    }
 
+    #landing-sub-text {
+        font-size: 15px;
+    }
+}
+
+/* Our Story Section */ 
+
+#home-section-1 {
+    padding: 110px 0;;
+    max-width: 100%;
+    min-height: 450px;
+}
+
+#story-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 432px;
+    max-width: 100%;
+}
+
+#story-box {
+    padding: 0px 40px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 594px;
+    padding-top: 60px;
+}
+
+#story-content {
+    width: 100%;
+    padding: 35px 20px 0px 0px;
+}
+
+#story-content p {
+    color: #999;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0px 0px 16px;
+    line-height: 1.67;
+}
+
+#story-images-box {
+}
+
+#story-quote {
+    padding-top: 20px;
+}
+
+#story-quote img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    float: left;
+}
+
+#quote-info {
+    margin-left: 80px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+#quote-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 13px;
+    display: block;
+}
+
+#quote-job { 
+    font-size: 14px;
+    margin-top: 9px;
+    display: block;
+}
+
+#story-images-container {
+    display: grid;
+    min-height: 432px;
+    width: 594px;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.image-container {
+    max-height: 100%;
+}
+
+.story-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.cursive-heading {
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #d9a868;
+    padding: 0px 0px 8px;
+}
+
+.bold-heading {
+    font-size: 45px;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+}
+
+@media (max-width: 1300px) {
+    #story-box {
+        width: 100%;
+        margin-bottom: 90px;
+        padding-top: 0;
+    }
+    #story-images-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .bold-heading {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+    #story-images-container {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
 }
