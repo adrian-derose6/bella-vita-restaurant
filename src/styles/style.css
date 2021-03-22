@@ -14,8 +14,32 @@ body {
 }
 
 #content {
-    height: 100%;
-    border: 1px solid green;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
 }
 
 /* Header Styles */
@@ -480,8 +504,13 @@ main {
 
 /* Our Story Section */ 
 
-#home-section-1 {
-    padding: 110px 0;;
+.section-box {
+    padding: 110px 0;
+    display: block;
+    position: relative;
+}
+
+#story-section {
     max-width: 100%;
     min-height: 450px;
 }
@@ -616,3 +645,28 @@ main {
         grid-template-rows: 1fr 1fr;
     }
 }
+
+#features-section {
+    background: url("http://demo.ovathemes.com/reon/wp-content/uploads/2018/12/hp-1-features-1.jpg");
+    box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+}
+
+.gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
