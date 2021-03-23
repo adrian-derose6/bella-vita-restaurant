@@ -1,6 +1,7 @@
 import loadHome from './home.js';
 import loadMenu from './menu.js';
 import loadContact from './contact.js';
+import loadCarousels from './carousel.js';
 
 function loadNav() {
     const buttons = document.querySelectorAll('.button-nav');
@@ -94,6 +95,7 @@ function initializeWebsite() {
     const content = document.getElementById('content');
 
     loadNav();
+    loadCarousels();
     content.appendChild(createFooter());
 
     window.addEventListener("scroll", runOnScroll);

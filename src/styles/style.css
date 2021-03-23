@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
     height: 100%;
@@ -34,6 +39,27 @@ body {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.body-button {
+  
+    min-height: 60px;
+    min-width: 200px;
+    line-height: 65px;
+    z-index: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans";
+    background-color: rgb(218, 188, 149);
+    text-decoration: none;
+    max-width: none;
+    transition: background-color .2s, border-color .2s;
+    -webkit-transition: background-color .2s, border-color .2s;
+    -moz-transition: background-color .2s, border-color .2s;
+    -o-transition: background-color .2s, border-color .2s;
 }
 
 @media (min-width: 1200px) {
@@ -254,7 +280,6 @@ main {
     color: white;
     margin: 10px;
     white-space: nowrap;
-
     -webkit-animation: fadeInSlideDown 1s; 
     -moz-animation: fadeInSlideDown 1s; 
      -ms-animation: fadeInSlideDown 1s; 
@@ -310,7 +335,6 @@ main {
     }
 }
 
-
 #landing-sub-text {
     font-size: 20px;
     font-weight: 400;
@@ -333,7 +357,7 @@ main {
     font-weight: 500;
     color: rgb(255, 255, 255);
     font-family: "Josefin Sans";
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     border-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: 2px;
@@ -343,7 +367,6 @@ main {
     cursor: pointer;
     text-decoration: none;
     visibility: inherit;
-    transition: none 0s ease 0s;
     text-align: inherit;
     margin: 30px;
     padding: 21px 44px;
@@ -353,7 +376,6 @@ main {
     max-height: none;
     max-width: none;
     opacity: 0;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-origin: 50% 50% 0px;
     transition: background-color .2s, border-color .2s;
     -webkit-transition: background-color .2s, border-color .2s;
@@ -654,19 +676,82 @@ main {
     background-size: cover;
 }
 
-.gallery-cell {
-    width: 66%;
-    height: 200px;
-    margin-right: 10px;
-    background: #8C8;
-    counter-increment: gallery-cell;
+.carousel {
+    width: 100%;
 }
 
-.gallery-cell:before {
+.feature-content {
+    width: 100%;
+    margin-right: 30px;
+    padding: 0 70px;
+    background: transparent;
+    border: 1px solid green;
+    counter-increment: feature-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.flickity-button {
+    background: transparent !important;
+}
+
+.flickity-button-icon {
+    fill: white !important;
+}
+
+.flickity-page-dots .dot {
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border: 2px solid white !important;
+}
+.flickity-page-dots .dot.is-selected {
+    background: white !important;
+}
+
+.feature-detail {
+    background: #fff;
+    width: 93%;
+    padding: 80px 50px 80px 60px;
+    box-sizing: border-box;
+}
+
+.feature-detail h3 {
+    font-size: 50px !important;
+}
+
+.feature-detail h2 {
+    padding-bottom: 13px;
+}
+
+.feature-detail p {
+    font-size: 16px;
+    margin-bottom: 48px;
+    color: #666;
+    line-height: 23px;
+    margin-top: 0;
+}
+
+.feature-image {
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.2);
+    -o-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.2);
+    -ms-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.2);
+}
+
+.feature-image img {
     display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-  }
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
