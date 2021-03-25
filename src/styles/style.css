@@ -42,9 +42,9 @@ body {
 }
 
 .body-button {
-  
-    min-height: 60px;
-    min-width: 200px;
+    height: 60px;
+    width: 200px;
+    text-align: center;
     line-height: 65px;
     z-index: 0;
     cursor: pointer;
@@ -60,6 +60,10 @@ body {
     -webkit-transition: background-color .2s, border-color .2s;
     -moz-transition: background-color .2s, border-color .2s;
     -o-transition: background-color .2s, border-color .2s;
+}
+
+.body-button:hover {
+    background: #f2d1a5;
 }
 
 @media (min-width: 1200px) {
@@ -659,6 +663,10 @@ main {
     .bold-heading {
         font-size: 35px;
     }
+
+    .cursive-heading {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -681,11 +689,12 @@ main {
 }
 
 .feature-content {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     margin-right: 30px;
     padding: 0 70px;
     background: transparent;
-    border: 1px solid green;
     counter-increment: feature-content;
     display: flex;
     justify-content: center;
@@ -700,6 +709,10 @@ main {
 
 .flickity-button-icon {
     fill: white !important;
+}
+
+.flickity-page-dots {
+    bottom: -50px !important;
 }
 
 .flickity-page-dots .dot {
@@ -718,10 +731,6 @@ main {
     width: 93%;
     padding: 80px 50px 80px 60px;
     box-sizing: border-box;
-}
-
-.feature-detail h3 {
-    font-size: 50px !important;
 }
 
 .feature-detail h2 {
@@ -754,4 +763,36 @@ main {
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .feature-content {
+    }
+
+    .feature-detail {
+        width: 100%;
+        padding: 60px 20px 60px;
+    }
+}
+
+@media (max-width: 769px) {
+    .feature-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    #features-section {
+        padding-bottom: 160px;
+    }
+
+    .feature-content {
+        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    .flickity-button {
+        display: none;
+    }
+
 }
