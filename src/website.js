@@ -84,9 +84,9 @@ function createFooter() {
     githubIcon.classList.add("fab");
     githubIcon.classList.add("fa-github");
   
-    /* githubLink.appendChild(githubIcon);
+    githubLink.appendChild(githubIcon);
     footer.appendChild(copyright);
-    footer.appendChild(githubLink); */
+    footer.appendChild(githubLink); 
   
     return footer;
 }
