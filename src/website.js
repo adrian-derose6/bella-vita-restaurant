@@ -56,7 +56,6 @@ function setActiveButton(button) {
     });
 
     button.classList.add('active-button');
-    console.log('Set Active')
 }
 
 function openNav() {
@@ -100,10 +99,6 @@ function initializeWebsite() {
 
     window.addEventListener("scroll", runOnScroll);
     window.addEventListener("resize", runOnResize);
-}
-
-window.onload = function() {
-
 }
 
 export default initializeWebsite;
