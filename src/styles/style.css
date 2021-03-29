@@ -1018,3 +1018,40 @@ main {
     }
 }
 
+#home-filler-section {
+    background-image: url("http://demo.ovathemes.com/reon/wp-content/uploads/2018/12/hp-1-cta.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 118px 0px 120px 0px !important;
+}
+
+#filler-content {
+    padding: 90px 0 96px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#filler-content h2 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #filler-content {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #filler-content h2 {
+        font-size: 50px;
+    }
+}

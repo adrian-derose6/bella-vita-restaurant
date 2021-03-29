@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.2",
+    "flickity-fade": "^1.0.0",
     "flickity-hash": "^1.0.3",
     "path": "^0.12.7"
   }
