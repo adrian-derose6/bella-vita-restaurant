@@ -122,28 +122,29 @@ header.active {
     padding: none; 
 }
 
-#name-container {
+.name-container {
     padding-top: 5px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
-#name-container h5 {
-    letter-spacing: 5px;
-    margin: 0px;
-    margin-bottom: 10px;
-}
-
-#restaurant-name {
-    font-size: 60px;
+.restaurant-name {
+    font-size: 50px;
     font-family: 'Tangerine', cursive;
     margin: 0px;
     color: white;
     padding: none;
+}
+
+.restaurant-subname {
+    letter-spacing: 5px;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
 }
 
 button {
@@ -234,7 +235,7 @@ button {
         display: none;
     }
 
-    #name-container {
+    #header-name-container {
         margin-left: 20px;
     }
 
@@ -242,7 +243,7 @@ button {
         font-size: 50px;
     }
 
-    #restaurant-name, #name-container h5 {
+    #header-name-container .restaurant-name, #header-name-container .restaurant-subname {
         color: #333;
     }
 
@@ -1048,7 +1049,7 @@ main {
     text-align: center;
 }
 
-#home-gallery-grid {
+.home-gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -1134,7 +1135,7 @@ main {
         width: 100%;
     }
 
-    #home-gallery-grid {
+    .home-gallery-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
@@ -1242,5 +1243,160 @@ main {
 @media (max-width: 1200px) {
     #home-reservation-section p {
         margin: 0 10% 26px;
+    }
+}
+
+@media (max-width: 900px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #3a424e;
+}
+
+.footer-main {
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+    padding: 66px 0;
+    position: relative;
+    max-width: 1190px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    padding: 10px;
+    flex: 1;
+    max-width: 25%;
+}
+
+.footer-item .name-container {
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-item .restaurant-subname {
+    margin-left: 10px;
+}
+
+.footer-item span {
+    color: white;
+    line-height: 23px;
+}
+
+.socials-container {
+    margin-top: 50px;
+}
+
+.socials-icon {
+    cursor: pointer;
+    color: rgba(255,255,255,.24);
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    display: inline;
+    line-height: 25px;
+}
+
+.socials-icon:hover {
+    color: rgba(255,255,255, 1);
+}
+
+.socials-icon:not(:first-child) {
+    margin-left: 12px;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 18px;
+    padding: 25px 0 16px;
+    margin: 10px 0px 0px !important;
+}
+
+.footer-item ul {
+    padding: 0;
+    padding-right: 10px;
+}
+
+.footer-item ul li {
+    padding: 15px 0 15px;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: rgba(255,255,255,.1);
+    list-style-type: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    width: 100%;
+}
+
+.footer-link {
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    display: block;
+    transition: all .3s ease;
+    box-shadow: none;
+    text-decoration: none;
+    font-family: Josefin Sans,sans-serif;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-item .home-gallery-grid {
+    margin-top: 22px;
+}
+
+#footer-contact-info .footer-heading {
+    margin-bottom: 20px !important;
+}
+
+#footer-contact-info span {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#footer-contact-info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer-contact-info div span:nth-child(2) {
+    font-size: 15px;
+    color: #ccc;
+}
+
+@media (max-width: 900px) {
+    .footer-item .home-gallery-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .footer-item {
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-contact-info span {
+        display: block
+    }
+
+    .footer-item {
+        min-width: 100%;
     }
 }
