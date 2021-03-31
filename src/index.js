@@ -1,7 +1,7 @@
-import initializeWebsite from './website.js';
-import './styles/common.css';
-import './styles/home.css';
-import './styles/footer.css';
-import './styles/flickity.css';
+import initializeWebsite from './js/website.js';
+import './css/common.css';
+import './css/home.css';
+import './css/footer.css';
+import './css/flickity.css';
 
 initializeWebsite();

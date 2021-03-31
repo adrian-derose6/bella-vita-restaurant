@@ -1,8 +1,3 @@
-import loadHome from './home.js';
-import loadMenu from './menu.js';
-import loadContact from './contact.js';
-import loadCarousels from './carousel.js';
-
 function loadNav() {
     const buttons = document.querySelectorAll('.button-nav');
     const navMenuIcon = document.getElementById('nav-menu-icon');
@@ -18,6 +13,8 @@ function loadNav() {
     navMenuIcon.addEventListener('click', openNav);
     navCloseButton.addEventListener('click', closeNav);
 
+    window.addEventListener("scroll", runOnScroll);
+    window.addEventListener("resize", runOnResize);
 }
 
 function runOnScroll() {
@@ -31,7 +28,7 @@ function runOnScroll() {
     else {
         header.classList.remove('active');
     }
- };
+};
 
 function runOnResize() {
     const header = document.getElementById('header');
@@ -67,15 +64,4 @@ function closeNav() {
     document.getElementById("nav-open-canvas").style.width = "0";
 }
 
-function initializeWebsite() {
-    const content = document.getElementById('content');
-
-    loadNav();
-    loadCarousels();
-    loadHome();
-
-    window.addEventListener("scroll", runOnScroll);
-    window.addEventListener("resize", runOnResize);
-}
-
-export default initializeWebsite;
+export default loadNav;
