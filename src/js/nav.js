@@ -64,4 +64,8 @@ function closeNav() {
     document.getElementById("nav-open-canvas").style.width = "0";
 }
 
+function checkCurrentPage() {
+    
+}
+
 export default loadNav;

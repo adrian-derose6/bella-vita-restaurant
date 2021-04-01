@@ -1,16 +1,19 @@
-import loadHome from './home.js';
-import loadMenu from './menu.js';
-import loadContact from './contact.js';
 import loadCarousels from './carousel.js';
+import loadHome from './home.js';
 import loadNav from './nav.js';
 
-
 function initializeWebsite() {
-    const content = document.getElementById('content');
-
     loadNav();
-    loadCarousels();
-    loadHome();
+
+    var pathname = window.location.pathname;
+    switch(pathname) {
+    case "/" :
+        loadHome();
+        break;
+    case "/menu.html" :
+        console.log("menu");
+        break;
+    }
 }
 
 export default initializeWebsite;

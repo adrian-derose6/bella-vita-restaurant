@@ -1,5 +1,60 @@
 <!DOCTYPE html>
 
 <html>
-    
-</html><script defer src="/dist/js/index_bundle.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <title>Bella Vita</title>
+    </head>
+    <body>
+        <div class="content">
+            <header id="header">
+                <div class="name-container" id="header-name-container">
+                    <h1 class="restaurant-name">Bella Vita</h1>
+                    <h5 class="restaurant-subname">RESTAURANT</h5>
+                </div>
+                <nav>
+                    <button class="button-nav" data-route="home">
+                        HOME
+                    </button>
+                    <button class="button-nav" data-route="menu">
+                        <a href="menu.html">MENU</a>
+                    </button>
+                    <button class="button-nav" data-route="blog">
+                        BLOG
+                    </button>
+                    <button class="button-nav" data-route="gallery">
+                        GALLERY
+                    </button>
+                    <button class="button-nav" data-route="contact-us">
+                        CONTACT US
+                    </button>
+                </nav>
+                <a id="nav-menu-icon">
+                    <svg viewBox="0 0 100 80" width="20.13" height="24">
+                        <rect width="100" height="15"></rect>
+                        <rect y="30" width="100" height="15"></rect>
+                        <rect y="60" width="100" height="15"></rect>
+                    </svg>
+                </a>
+            </header>
+        </div>
+        <div id="nav-open-canvas">
+        </div>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:void(0)" class="closebtn" id="nav-closebtn">&times;</a>
+            <a href="#">HOME</a>
+            <a href="#">MENU</a>
+            <a href="#">BLOG</a>
+            <a href="#">GALLERY</a>
+            <a href="#">CONTACT US</a>
+        </div>
+    <script defer src="index_bundle.js"></script></body>
+</html>

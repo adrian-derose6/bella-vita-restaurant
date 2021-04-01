@@ -1,20 +1,17 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/js',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js'
     },
     devServer: {
         open: true,
         publicPath: "",
-        contentBase: path.resolve(__dirname, "./dist"),
+        contentBase: path.resolve(__dirname, "dist"),
         watchContentBase: true,
         compress: true,
         writeToDisk: true
@@ -25,11 +22,14 @@ module.exports = {
                 test: /\.(css)$/,
                 use: ['style-loader', 'css-loader'],  
             },
+            {   test: /\.(html)$/,
+                loader: 'html-loader'
+            }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/templates/index.html',
             inject: 'body',
             filename: 'index.html'
         }),
