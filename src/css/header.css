@@ -1,8 +1,8 @@
 /* Header Styles */
 
 header {
-    background: transparent;
-    position: fixed;
+    background-color: white; 
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -14,6 +14,10 @@ header {
     transition: all 0.5s;
 }
 
+header.home {
+    background: transparent;
+}
+
 header.active {
     background-color: #000000;
     opacity: 1;
@@ -22,6 +26,16 @@ header.active {
     -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
     box-shadow: 0px 1px 6px 0px #c5c5c5;
     padding: none; 
+}
+
+header .dark {
+    color: #343434;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .name-container {
@@ -60,6 +74,8 @@ button {
 .button-nav {
     padding: 1.5rem;
     font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
     background-color: transparent;
     transition: transform 0.3s;
     color: white;
@@ -72,7 +88,11 @@ button {
 }
 
 .button-nav:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
+}
+
+.button-nav.dark:hover {
+    border-bottom: 1px solid#343434;
 }
 
 #nav-menu-icon {

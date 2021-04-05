@@ -7,11 +7,10 @@ function initializeWebsite() {
 
     var pathname = window.location.pathname;
     switch(pathname) {
-    case "/" :
+    case "/":
         loadHome();
         break;
-    case "/menu.html" :
-        console.log("menu");
+    case "/menu.html":
         break;
     }
 }

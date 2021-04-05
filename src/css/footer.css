@@ -38,7 +38,7 @@
     line-height: 23px;
 }
 
-.socials-container {
+.footer-item .socials-container {
     margin-top: 50px;
 }
 
@@ -49,6 +49,10 @@
     font-weight: 400;
     display: inline;
     line-height: 25px;
+}
+
+.socials-icon.light {
+    color: white;
 }
 
 .socials-icon:hover {

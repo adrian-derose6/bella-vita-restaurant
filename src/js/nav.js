@@ -3,13 +3,6 @@ function loadNav() {
     const navMenuIcon = document.getElementById('nav-menu-icon');
     const navCloseButton = document.getElementById('nav-closebtn');
 
-    buttons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            if (e.target.classList.contains('active')) return;
-            setActiveButton(button);
-        });
-    });
-
     navMenuIcon.addEventListener('click', openNav);
     navCloseButton.addEventListener('click', closeNav);
 
@@ -32,11 +25,12 @@ function runOnScroll() {
 
 function runOnResize() {
     const header = document.getElementById('header');
+    var pathname = window.location.pathname;
 
-    if (window.innerWidth <= 1199) {
+    if (window.innerWidth <= 1199 && pathname === '/') {
         header.classList.remove('active');
     }
-    else if (window.innerWidth > 1199) {
+    else if (window.innerWidth > 1199 && pathname === '/') {
         header.classList.add('active');
     }
 }
@@ -62,10 +56,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("sidenav").style.width = "0";
     document.getElementById("nav-open-canvas").style.width = "0";
-}
-
-function checkCurrentPage() {
-    
 }
 
 export default loadNav;
