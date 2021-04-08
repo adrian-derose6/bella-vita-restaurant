@@ -162,7 +162,7 @@ a {
     width: 100%;
 }
 
-.page-header-section {
+.page-heading-section {
     padding-top: 112px;
     padding-bottom: 120px;
     position: relative;
@@ -171,13 +171,13 @@ a {
     background-position: center;
 }
 
-.page-header-inner {
+.page-heading-inner {
     text-align: center;
     width: 50%;
     margin: 0 auto;
 }
 
-.page-header-inner h1 {
+.page-heading-inner h1 {
     color: #fff;
     font-weight: 400;
     font-size: 65px;
@@ -190,7 +190,7 @@ a {
     margin-inline-end: 0px;
 }
 
-.page-header-inner span {
+.page-heading-inner span {
     color: #f2f2f2;
     font-size: 18px;
     font-weight: 400;
