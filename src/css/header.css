@@ -14,11 +14,12 @@ header {
     transition: all 0.5s;
 }
 
-header.home {
+#home-header {
     background: transparent;
+    position: fixed;
 }
 
-header.active {
+#home-header.active {
     background-color: #000000;
     opacity: 1;
     height: 90px;
@@ -26,6 +27,16 @@ header.active {
     -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
     box-shadow: 0px 1px 6px 0px #c5c5c5;
     padding: none; 
+}
+
+#pages-header {
+    transition: all 0.5s;
+}
+
+#pages-header.sticky {
+    height: 105px;
+    -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
+    box-shadow: 0px 1px 6px 0px #c5c5c5;
 }
 
 header .dark {
@@ -72,6 +83,7 @@ button {
 }
 
 .button-nav {
+    position: relative;
     padding: 1.5rem;
     font-size: 1.5rem;
     font-weight: 500;
@@ -80,19 +92,34 @@ button {
     transition: transform 0.3s;
     color: white;
     border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s;
 }
 
-.active-button {
-    border-bottom: 1px solid white;
+.button-nav:after {
+    transition: all 0.3s;
 }
 
-.button-nav:hover {
-    border-bottom: 2px solid white;
+.button-nav:hover:after {
+    content: "";
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 25px;
 }
 
-.button-nav.dark:hover {
-    border-bottom: 1px solid#343434;
+.button-nav.dark:hover:after {
+    content: "";
+    background: #343434;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 25px;
 }
 
 #nav-menu-icon {
@@ -151,6 +178,10 @@ button {
         height: 80px;
         -webkit-box-shadow: 0px 1px 6px 0px #c5c5c5; 
         box-shadow: 0px 1px 6px 0px #c5c5c5
+    }
+
+    #home-header {
+        background-color: white;
     }
 
     nav {

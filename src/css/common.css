@@ -162,9 +162,60 @@ a {
     width: 100%;
 }
 
+.page-header-section {
+    padding-top: 112px;
+    padding-bottom: 120px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page-header-inner {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.page-header-inner h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 65px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    word-wrap: break-word;
+    margin-block-end: 15px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.page-header-inner span {
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
 @media (max-width: 1200px) {
     .banner-container {
         max-width: 1200px;
         padding: 0 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .banner {
+        display: none;
+    }
+
+    .page-header-inner {
+        text-align: center;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .page-header-inner h1 {
+        font-size: 35px;
     }
 }

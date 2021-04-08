@@ -1,0 +1,114 @@
+#menu-page-header {
+    background-image: url("http://demo.ovathemes.com/reon/wp-content/uploads/2018/12/our-team-bc.jpg");
+}
+
+.menu-overview-grid {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+
+.menu-overview-row:nth-child(1) {
+    display: grid;
+    grid-template-columns: 33.333333% 41.666667% 25%;
+}
+
+.menu-overview-row:nth-child(2) {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+
+.menu-overview-item {
+    padding: 0px 12px 24px;
+    cursor: pointer;
+}
+
+.menu-overview-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-overview-content a {
+    height: 100%;
+    width: 100%;
+}
+
+.menu-overview-image {
+    height: 100%;
+    width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.menu-overview-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.5);
+    transition: all .5s ease .1s;
+    -moz-transition: all .5s ease .1s;
+    -webkit-transition: all .5s ease .1s;
+    -o-transition: all .5s ease .1s;
+    -ms-transition: all .5s ease .1s;
+}
+
+.menu-overview-overlay:hover {
+    background-color: rgba(0,0,0,.7);
+}
+
+.menu-overview-overlay h3 {
+    color: white;
+    padding: 12px 20px 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2173913043;
+    font-size: 28px;
+}
+
+.menu-overview-overlay div {
+    width: 70px;
+    height: 2px;
+    background: rgba(255,255,255,.55);
+}
+
+@media (max-width: 1200px) {
+    .menu-overview-item {
+        padding: 0 0.8vw 1.6vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-overview-item {
+        padding-bottom: 3vw;
+    }
+    .menu-overview-row:nth-child(1) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 37.5% 25% 37.5%;
+    }
+    
+    .menu-overview-row:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 37.5% 37.5%;
+    }
+
+    .menu-overview-item {
+        width: 100%;
+    }
+}

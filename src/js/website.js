@@ -7,7 +7,8 @@ function initializeWebsite() {
 
     var pathname = window.location.pathname;
     switch(pathname) {
-    case "/":
+    case "/", "/index.html":
+    case "":
         loadHome();
         break;
     case "/menu.html":
